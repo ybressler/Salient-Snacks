@@ -1,0 +1,28 @@
+
+.header{
+  text-align: center;
+  color:orange;
+  font-size: 5rem;
+}
+
+.description{
+  text-align: left;
+  color:black;
+  font-size: 1.5rem;
+}
+
+.header-row{
+  display: block;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.three-columns{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
