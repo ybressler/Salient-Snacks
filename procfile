@@ -1,1 +1,1 @@
-web: python snacks_app:server
+web: gunicorn snacks_app:server
