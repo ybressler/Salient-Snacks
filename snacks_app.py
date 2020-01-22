@@ -95,7 +95,7 @@ app.layout = html.Div(
                 html.Div(
                     className='row',
                     children = [
-                        html.Div(children = 'Something is here.'),
+                        html.Div(children = 'Something was here previously, but is it here anymore?'),
                         html.Div(children = 'Something else is here.'),
                     ]
 
