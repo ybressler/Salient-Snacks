@@ -197,3 +197,11 @@ hr {
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.two-columns{
+  column-count: 2;
+  column-gap: 2%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}

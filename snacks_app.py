@@ -45,7 +45,16 @@ app.layout = html.Div(
                 dcc.Store(id='tokens-memory', storage_type='session'),
                 html.H1(className='headline', children = 'Snacks App'),
                 html.Div(className='description', children = 'Description: Here\'s the body of the thing.'),
-                html.Div(id='tokens-summary', className='description-emphasis', children = 'You have 10 tokens left.'),
+                html.Div(
+                    className='two-columns',
+                    children=[
+                        html.Div(id='tokens-summary', className='description-emphasis', children = 'You have 10 tokens left.'),
+                        html.Button(className='reset-button', id='submit-button', n_clicks=0, children='Reset')
+                    ],
+                    style={"text-align":"left"}
+                 )
+
+
                 ]
             ),
         html.Div(
