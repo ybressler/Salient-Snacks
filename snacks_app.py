@@ -46,7 +46,7 @@ app.layout = html.Div(
                 html.H1(className='headline', children = 'Snacks App'),
                 html.Div(className='description', children = 'Description: Here\'s the body of the thing.'),
                 html.Div(
-                    className='two-columns',
+                    className='three-columns',
                     children=[
                         html.Div(id='tokens-summary', className='description-emphasis', children = 'You have 10 tokens left.'),
                         html.Button(className='reset-button', id='submit-button', n_clicks=0, children='Reset')
