@@ -46,10 +46,13 @@ def register_callbacks(app):
         for i, choice in enumerate(all_choices):
             data['State'][f'choice {i+1}'] = choice
 
-        if reset_clicks:
-            if not data.get('reset') or (data.get('reset') and reset_clicks > data.get('reset')):
-            # This doesnt discard the session of the user it only gives the tokens back.
-                data['Tokens'] = 10
+        # if the button was clicked and you clicked the button more times than not
+        if reset_clicks and (not data.get('reset') or reset_clicks > data.get('reset')):
+
+        # This doesnt discard the session of the user it only gives the tokens back.
+            data['Tokens'] = 10
+
+            # Now add to the reset count
             if not data.get('reset'):
                 data['reset'] = 1
             else:
@@ -98,6 +101,10 @@ def register_callbacks(app):
 
         if n>0:
             status = False
+
+        if n>3:
+            style['color'] = 'orange'
+            style['font-weight'] = 'normal'
 
         if n<=3:
             style['color'] = 'darkred'
