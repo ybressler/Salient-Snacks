@@ -70,7 +70,7 @@ app.layout = html.Div(
                             id='choice-column-2',
                             className='choice-column',
                             children = [
-                                html.Div('Col 1'),
+                                html.Div('Col 2'),
                                 html.Button(
                                     id='choice-col-2-button',
                                     className='choice-button',
@@ -82,7 +82,7 @@ app.layout = html.Div(
                             id='choice-column-3',
                             className='choice-column',
                             children = [
-                                html.Div('Col 1'),
+                                html.Div('Col 3'),
                                 html.Button(
                                     id='choice-col-3-button',
                                     className='choice-button',

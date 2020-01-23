@@ -43,9 +43,9 @@ def register_callbacks(app):
 
         all_choices = [choice_1,choice_2,choice_3]
         for i, choice in enumerate(all_choices):
-            data['State'][i] = choice
+            data['State'][f'choice {i+1}'] = choice
 
-        # logger.info(f'Updating page progress. Data = {data}')
+        logger.info(f'Updating page progress. Data = {data}')
         return data
 
 
