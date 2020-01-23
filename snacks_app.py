@@ -51,7 +51,7 @@ app.layout = html.Div(
                         html.Div(id='tokens-summary', className='description-emphasis', children = 'You have 10 tokens left.'),
                         html.Button(className='reset-button', id='reset-token-button', n_clicks=0, children='Reset')
                     ],
-                    style={"text-align":"left", "column-rule-style":"none"}
+                    style={"text-align":"center", "column-rule-style":"none", "margin-bottom":"10px"}
                  )
 
 
