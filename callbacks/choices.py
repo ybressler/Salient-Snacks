@@ -27,11 +27,12 @@ def register_callbacks(app):
             Input(f'choice-col-1-button', 'n_clicks'),
             Input(f'choice-col-2-button', 'n_clicks'),
             Input(f'choice-col-3-button', 'n_clicks'),
+            Input('reset-token-button', 'n_clicks'),
         ],
 
         [State('tokens-memory', 'memory')]
         )
-    def update_tab_1_progress(choice_1, choice_2, choice_3, data):
+    def update_tab_1_progress(choice_1, choice_2, choice_3, reset_clicks, data):
         """
         Stores what's what on the page.
         """
@@ -44,6 +45,15 @@ def register_callbacks(app):
         all_choices = [choice_1,choice_2,choice_3]
         for i, choice in enumerate(all_choices):
             data['State'][f'choice {i+1}'] = choice
+
+        if reset_clicks:
+            if not data.get('reset') or (data.get('reset') and reset_clicks > data.get('reset')):
+            # This doesnt discard the session of the user it only gives the tokens back.
+                data['Tokens'] = 10
+            if not data.get('reset'):
+                data['reset'] = 1
+            else:
+                data['reset'] += 1
 
         logger.info(f'Updating page progress. Data = {data}')
         return data

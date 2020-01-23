@@ -49,7 +49,7 @@ app.layout = html.Div(
                     className='three-columns',
                     children=[
                         html.Div(id='tokens-summary', className='description-emphasis', children = 'You have 10 tokens left.'),
-                        html.Button(className='reset-button', id='submit-button', n_clicks=0, children='Reset')
+                        html.Button(className='reset-button', id='reset-token-button', n_clicks=0, children='Reset')
                     ],
                     style={"text-align":"left", "column-rule-style":"none"}
                  )
